@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form
+    [form]="form"
+    [fields]="fields"
+    [model]="model"
+    [options]="options"
+  >
+    <div *ngFor="let field of fields; let i = index">
+      <formly-field [field]="field"></formly-field>
+    </div>
+  </formly-form>
+  <button type="button" class="btn btn-primary" (click)="addNewField()">
+    Add
+  </button>
+  <button
+    type="button"
+    class="btn btn-danger"
+    (click)="removeLastField()"
+    *ngIf="fields.length > 0"
+  >
+    Remove
+  </button>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

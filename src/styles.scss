@@ -1,0 +1,14 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body { padding: 10px; }
+
+.header {
+  text-align: center;
+  padding: .3rem;
+  img {
+    margin-bottom: .3rem;
+  }
+}
+
+form .mat-raised-button {
+  margin-right: 8px;
+}
